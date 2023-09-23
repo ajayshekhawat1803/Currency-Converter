@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* https://images.pexels.com/photos/2988232/pexels-photo-2988232.jpeg?auto=compress&cs=tinysrgb&w=1600 */
+
+body {
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.unsplash.com/photo-1608731433809-149763562571?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  /* backdrop-filter: 54px; */
+  /* background-blend-mode:darken; */
+  
+  /* filter: blur(1px); */
+  /* z-index: -1; */
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#swapBtn{
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 5px;
+  color: #fff;
+}
+#main{
+  /* border: 5px solid; */
+  background: transparent;
+  box-shadow: 0px 0px 10px rgb(208, 213, 215), 1px 1px 15px rgb(188, 210, 144);
+}
+#main span{
+  text-wrap: nowrap;
+}
+@media (max-width:768px) {
+  body{
+    padding: 20px;
+  }
+  #main{
+    width: 100%;
+  }
+
+}
+@media (max-width:425px) {
+  body{
+    padding: 10px;
+  }
+  #main input{
+    width: 80px;
+    text-overflow: ellipsis;
+  }
+  #swapBtn{
+    left: 45%;
+    padding: 5px 7px;
+    font-weight: 600;
+
+  }
+}
+@media (max-width:375px) {
+  #main{
+    padding: 25px 15px;
+  }
+}
+@media (max-width:320px) {
+ #swapBtn{
+  left: 40%;
+ }
+}
